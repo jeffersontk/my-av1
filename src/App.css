@@ -1,38 +1,103 @@
 .App {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: #4b79a1; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #283e51,
+    #4b79a1
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #283e51,
+    #4b79a1
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.content {
+  background: rgb(227, 227, 228);
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+  margin-top: 20px;
+  border-radius: 8px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content h1 {
+  margin: 0;
+  color: #333;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content p {
+  color: #444;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.display {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 10px;
+  background: #283e51;
+  height: 200px;
+  border-radius: 5px;
+  font-size: 34px;
+  width: 400px;
+  color: #ffe;
 }
-
-.App-link {
-  color: #61dafb;
+.result {
+  margin-bottom: 60px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.pointer {
+  height: 100px;
+  width: 10px;
+  margin-top: 80px;
+  background: rgb(227, 227, 228);
+  border-radius: 10px 10px 0 0;
+  transform: rotate(-90deg);
+  transform-origin: bottom;
+  transition: 1s;
+  animation: limite 4s 10s ease-in-out infinite;
+}
+.pointerAnimate {
+}
+@keyframes limite {
+  0% {
+    transform: rotate(-90deg);
   }
-  to {
-    transform: rotate(360deg);
+  30% {
+    transform: rotate(30deg);
+    transition: 4s;
   }
+  100% {
+    transform: rotate(32deg);
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+form input {
+  width: 397px;
+  height: 25px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  padding: 3px;
+}
+form button {
+  width: 150px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  height: 35px;
+  font-size: 21px;
+  color: #fff;
+  background: #4b79a1;
 }
